@@ -1,0 +1,26 @@
+00-starting-js-proj --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    connect javascript to html via the use of the html tag <script></script>.
+        <script> has several options called attributes 2 available to be used. The 2 important ones for this course attributes
+            defer   :   using "defer" in the html <script></script> tag means the javascrip in that tag will be loaded last.
+
+                    example: <script src="assets/scripts/app.js" defer></script>
+
+                            You would use the defer attribute to ensure any html elements your javascript might depend on or be trying to interact with is loaded
+                            before you attempt to use them.
+
+            type    :   type has several options available explination of each can be found. [javascript docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type)
+                    
+                    example: <script src="assets/scripts/app.js" type='module'></script>
+
+                            module is one to be familiar with. allows the use of "import statements".
+
+    IMPORT/EXPORT
+        IMPORT allows you to import a variable/function/class that has been defined in seperate file that has used the EXPORT keyword.
+            This is helpful to organize your code and make it more maintanable.
+        
+        When importing a variable or function you need to import { mustMatchVariableName } in {} and the the name of the variable or function as it was defined in the export statement.
+        
+
+    BEST PRACTICES
+        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
