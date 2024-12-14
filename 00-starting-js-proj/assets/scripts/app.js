@@ -1,7 +1,8 @@
 import { apiKey } from './utils.js';
 import msg from './exportdefault.js';
-import * as mixedExports from './mixedExports.js';
-import { person } from './testingJsonExport.js';
+import * as meDef from './mixedExports.js';
+import { name } from './mixedExports.js';
+import superfunthing from './exportDefualtFunction.js';
 
 /* 
     when importing something you need to type the name of the obj (variable/function) just as it was defined in the file in which it was defined.
@@ -17,7 +18,9 @@ import { person } from './testingJsonExport.js';
 */
 
 console.log(apiKey);
-console.log(msg);
-console.log(mixedExports.default);
-console.log(mixedExports.favFood);
-console.log(person.age);
+console.log(superfunthing());
+console.log(meDef.default);
+console.log(msg)
+console.log(name);
+console.log(meDef.person.age)
+
