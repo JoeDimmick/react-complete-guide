@@ -21,6 +21,17 @@
         When importing a variable or function you need to import { mustMatchVariableName } in {} and the the name of the variable or function as it was defined in the export statement.
         
 
-    BEST PRACTICES
+    Functions can be created with the function keyword or with arrow function
+
+        Example:
+        function keyword 
         
+        function MySuperFunFunction () { 
+            Do something cool
+        }
+
+        Arrow notation
+        () => {
+            Do something else cool
+        }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
