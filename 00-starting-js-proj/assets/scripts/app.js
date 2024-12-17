@@ -44,4 +44,52 @@ import User from './classTest.js';
 
 const favoriteGames = ["League of Legends", "World of Warcraft", "Civiliazation 6"];
 
-console.log();
+// console.log(favoriteGames);
+
+const anotherHobby = "The Witcher";
+
+favoriteGames.push(anotherHobby);
+
+// console.log(favoriteGames);
+
+// const index = favoriteGames.findIndex((item) => {
+//     return item === "World of Warcraft";
+// });
+//above code refactored into a 1 liner
+// const index = favoriteGames.findIndex(item => item === "World of Warcraft");
+
+// console.log(index);
+
+const editedGames = favoriteGames.map( item => ({key: item}));
+
+// editedGames.forEach(element => {
+//     console.log(element);
+// });
+
+//destructuring an array
+
+const [favgame1, favgame2, favgame3, favgame4] = editedGames;
+
+// console.log(favgame2);
+// console.log(favgame4);
+
+//spread operator
+const otherFavGames = ["Starcraft", "Halo"];
+
+const mergedFaveGames = [...editedGames, ...otherFavGames]
+
+// console.log(mergedFaveGames)
+
+const user = {
+    name: "Lee Sin",
+    champStyle: "Fighter",
+    id: 5557897
+};
+
+console.log(user);
+
+const extendedUser = {
+    isBadAss: true,
+    ...user
+};
+console.log(extendedUser);
