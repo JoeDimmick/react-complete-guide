@@ -42,7 +42,7 @@ function App() {
             <CoreConcept title={ CORE_CONCEPTS[3].title } description={CORE_CONCEPTS[3].description} image={CORE_CONCEPTS[3].image} />
           */}
           {/*Dynamically create the needed number of Core Concepts based on the array size of the data */
-            CORE_CONCEPTS.map( item => <CoreConcept {...item} /> )
+            CORE_CONCEPTS.map( item => <CoreConcept key={item.title} {...item} /> )
           }
 
           </ul>
