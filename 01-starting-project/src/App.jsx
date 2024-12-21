@@ -2,8 +2,19 @@ import { CORE_CONCEPTS } from './data.js';
 import Header from './components/header/Header.jsx';
 import CoreConcept from './components/coreconcepts/CoreConcept.jsx'
 import TabButton from './components/tabmenu/TabButton.jsx';
+import { useState } from 'react';
 
 function App() {
+
+  //let tabContent = 'Please select a tab.'
+  const [tabContent, setTabContent] = useState('Please select a tab.')
+
+  function handleSelect(selectedButton) {
+
+    setTabContent(selectedButton);
+    console.log(selectedButton);
+}
+
   return (
     <div>
       <Header/>
@@ -20,12 +31,17 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton label="Components"/>
-            <TabButton label="JSX"/>
-            <TabButton label="Props"/>
-            <TabButton label="State"/>
+          {/* using an anonymous function to then call the handleSelect() function. The anonymous function is executed when the button is clicked allowing handleSelect() to be
+              called rather than passed.
+              Example of passing handleSelect to the TabButton Component when the button is clicked: <TabButton onSelect={handleSelect} label="JSX"/>
+              Example of using an anonymous function to execute handleSelect when the button is clicked: <TabButton onSelect={() => handleSelect()} label="Components"/>
+           */}
+            <TabButton label='Components' onSelect={() => handleSelect('Components')} />
+            <TabButton label='JSX' onSelect={() => handleSelect('JSX')}/>
+            <TabButton label='Props' onSelect={() => handleSelect('Props')}/>
+            <TabButton label='State'onSelect={() => handleSelect('State')}/>
           </menu>
-
+          {tabContent}
         </section>
       </main>
     </div>
