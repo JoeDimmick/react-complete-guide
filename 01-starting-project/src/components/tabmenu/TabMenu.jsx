@@ -16,7 +16,8 @@ export default function TabMenu({label}) {
             {/*handleClick() vs handleclick */}
             {/* handleClick means the function would be executed on render */}
             {/* What really needs to happen is the function needs to be executed when the button is clicked. Meaning the function needs to passed (handed off to) 
-                the button via the 'onClick' Attribute to be executed when the button is clicked.*/}
+                the button via the 'onClick' Attribute to be executed when the button is clicked.
+            */}
 
         </li>
     )
