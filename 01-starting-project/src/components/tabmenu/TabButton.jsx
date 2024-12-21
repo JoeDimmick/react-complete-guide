@@ -1,6 +1,6 @@
-import './Tabmenu.css';
+import './TabButton.css';
 
-export default function TabMenu({label}) {
+export default function TabButton({label}) {
     //pure javascript way to handle onclick events
     //document.querySelector('button').addEventListener('click', () => { do something interesting});
     //document.querySelector('button') querySelector would grab all elements of 'button'
@@ -18,7 +18,6 @@ export default function TabMenu({label}) {
             {/* What really needs to happen is the function needs to be executed when the button is clicked. Meaning the function needs to passed (handed off to) 
                 the button via the 'onClick' Attribute to be executed when the button is clicked.
             */}
-
         </li>
     )
 }
