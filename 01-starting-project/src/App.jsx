@@ -35,10 +35,16 @@ function App() {
         <section id ="core-concepts">
         <h2>Time to get started!</h2>
           <ul>
+          {/* Old way we did the CoreConcept
             <CoreConcept title={ CORE_CONCEPTS[0].title } description={CORE_CONCEPTS[0].description} image={CORE_CONCEPTS[0].image} />
             <CoreConcept {...CORE_CONCEPTS[1]} />
             <CoreConcept title={ CORE_CONCEPTS[2].title } description={CORE_CONCEPTS[2].description} image={CORE_CONCEPTS[2].image} />
             <CoreConcept title={ CORE_CONCEPTS[3].title } description={CORE_CONCEPTS[3].description} image={CORE_CONCEPTS[3].image} />
+          */}
+          {/*Dynamically create the needed number of Core Concepts based on the array size of the data */
+            CORE_CONCEPTS.map( item => <CoreConcept {...item} /> )
+          }
+
           </ul>
         </section>
         <section id="examples">
