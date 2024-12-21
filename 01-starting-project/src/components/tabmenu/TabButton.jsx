@@ -1,6 +1,6 @@
 import './TabButton.css';
 
-export default function TabButton({label, onSelect}) {
+export default function TabButton({label, onSelect, isSelected}) {
     //pure javascript way to handle onclick events
     //document.querySelector('button').addEventListener('click', () => { do something interesting});
     //document.querySelector('button') querySelector would grab all elements of 'button'
@@ -8,7 +8,7 @@ export default function TabButton({label, onSelect}) {
 
     return (
         <li>
-            <button onClick={onSelect}>{label}</button>
+            <button className={isSelected ? 'active' : undefined} onClick={onSelect}>{label}</button>
             {/*handleClick() vs handleclick */}
             {/* handleClick means the function would be executed on render */}
             {/* What really needs to happen is the function needs to be executed when the button is clicked. Meaning the function needs to passed (handed off to) 
