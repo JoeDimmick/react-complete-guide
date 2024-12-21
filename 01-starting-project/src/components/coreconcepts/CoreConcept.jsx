@@ -1,3 +1,4 @@
+import './CoreConcepts.css';
 // Version 1
 // function CoreConcept(props){
 //   return(
