@@ -9,12 +9,7 @@ export default function Player ({name,symbol}) {
         setPlayerName(e.target.value);
     }
 
-    function handleEditClick() {
-        setIsEditing(!isEditing);
-        console.log("button clicked");
-    }
-
-    function handleSaveClick () {
+    function handleClick () {
         if (playerName.trim()){
             setPlayerName(playerName);
         }
@@ -25,15 +20,12 @@ export default function Player ({name,symbol}) {
         <li>
             <span className="player">
             {isEditing ? 
-                <input type="text" onChange={handlePlayerNameChange}></input> : 
+                <input type="text" required onChange={handlePlayerNameChange}></input> : 
                 <span className="player-name">{playerName}</span>
             }
             <span className="player-symbol">{symbol}</span>
             </span>
-            {isEditing ? 
-                <button onClick={handleSaveClick}>Save</button> :
-                <button onClick={handleEditClick}>Edit</button>
-            }
+            <button onClick={handleClick}>{isEditing ? 'Save' : 'Edit'}</button>
         </li>    
     )
 }
