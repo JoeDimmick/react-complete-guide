@@ -13,14 +13,14 @@ export default function Player ({name,symbol}) {
         if (playerName.trim()){
             setPlayerName(playerName);
         }
-        setIsEditing(!isEditing);
+        setIsEditing(editing => !editing);
     }
     
     return(
         <li>
             <span className="player">
             {isEditing ? 
-                <input type="text" required onChange={handlePlayerNameChange}></input> : 
+                <input type="text" data="nameInput" required value={playerName} onChange={handlePlayerNameChange}></input> : 
                 <span className="player-name">{playerName}</span>
             }
             <span className="player-symbol">{symbol}</span>

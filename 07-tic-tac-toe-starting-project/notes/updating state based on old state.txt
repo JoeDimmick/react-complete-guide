@@ -1,0 +1,16 @@
+When updating state based on the value of the current (or old state). The best way to to do it is to pass a function to the setState call.
+
+example.
+
+given const [ isEditing, setIsEditing ] = useState(false);
+
+instead of doing
+setIsEditing(!isEditing);
+
+you should pass a function to your state updating function. This function will automatically be called by react and will receive the
+guaranteed latest state value.
+
+setIsEditiing(wasEditing => !wasEditing);
+
+The problem with setIsEditing(!isEditing); react is scheduling state updates, it is not performed immidately it is scheduled for the future.
+this could cause the value of !isEditing to not be the value you may expect.
